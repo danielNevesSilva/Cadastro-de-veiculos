@@ -1,0 +1,89 @@
+﻿@model List<VeiculoModel>
+@{
+    ViewData["Title"] = "Pagina Inicial";
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Página</title>
+
+</head>
+<body>
+
+    <div class="">
+        <div style="display: inline-block;" class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <p style="display: inline;"><strong>QTD VEÍCULOS:</strong> @ViewBag.QuantidadeVeiculosAtivos</p>
+            <p style="display: inline;"><strong>QTD UNID SUL:</strong> @ViewBag.QuantidadeVeiculosAtivosUnidadeSul</p>
+            <p style="display: inline;"><strong>QTD UNID LESTE:</strong> @ViewBag.QuantidadeVeiculosAtivosUnidadeLeste</p>
+        </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a class="btn btn-primary" role="button" asp-controller="CadastrodeVeiculos" asp-action="NovoVeiculo">Adicionar novo veículo</a>
+        </div>
+        <br>
+
+        <h1 class="display-4">Listas de veículos cadastrados</h1>
+
+        <form asp-action="Index" method="get" >
+        <div class="input-group">
+                <input type="text" name="pesquisa" id="pesquisa" class="form-control rounded" placeholder="Pesquisar" aria-label="Search" aria-describedby="search-addon" oninput="toUpperCase('Placa')" />
+                <button type="submit" class="btn btn-primary" data-mdb-ripple-init>Pesquisar</button>
+        </div>
+        </form>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Placa</th>
+                    <th scope="col">Marca</th>
+                    <th scope="col">Modelo</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Unidade</th>
+                    <th scope="col">Data_Cadastro</th>
+                    <th scope="col">#</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null && Model.Any())
+                {
+                    foreach (VeiculoModel veiculo in Model)
+                    {
+                        <tr class="veiculo-row">
+                            <td>@veiculo.Placa</td>
+                            <td>@veiculo.Marca</td>
+                            <td>@veiculo.Modelo</td>
+                            <td>@veiculo.Tipo</td>
+                            <td>@veiculo.Unidade</td>
+                            <td>@veiculo.DataCriacao.ToShortDateString()</td>
+                            <td>
+                                <div class="btn-group" role="group">
+                                    <a role="button" class=" btn btn-warning" asp-route-id="@veiculo.id" asp-controller="CadastrodeVeiculos" asp-action="EditarVeiculo" class="btn btn-warning">Editar</a>
+                                    <a role="button" class="btn btn-danger" asp-route-id="@veiculo.id" asp-controller="CadastrodeVeiculos" asp-action="RemoverVeiculo">Excluir</a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+
+        <div>
+            @if (ViewBag.CurrentPage > 1)
+            {
+                <a class="btn btn-primary" href="?page=@(ViewBag.CurrentPage - 1)&pageSize=@ViewBag.PageSize" role="button">Anterior</a>
+            }
+            @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+            {
+                <a class="btn btn-primary" href="?page=@(ViewBag.CurrentPage + 1)&pageSize=@ViewBag.PageSize" role="button">Próxima</a>
+            }
+        </div>
+
+    </div>
+
+   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/js/NovoVeiculo.js"></script>
+</body>
+</html>

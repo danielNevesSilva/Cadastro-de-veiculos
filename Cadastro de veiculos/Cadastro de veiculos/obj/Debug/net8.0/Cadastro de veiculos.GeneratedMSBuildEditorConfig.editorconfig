@@ -1,0 +1,55 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Cadastro_de_veiculos
+build_property.RootNamespace = Cadastro_de_veiculos
+build_property.ProjectDir = C:\Users\Daniel TI\Desktop\Veiculos\Cadastro de veiculos\Cadastro de veiculos\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Daniel TI\Desktop\Veiculos\Cadastro de veiculos\Cadastro de veiculos
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Daniel TI/Desktop/Veiculos/Cadastro de veiculos/Cadastro de veiculos/Views/CadastrodeVeiculos/EditarVeiculo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FkYXN0cm9kZVZlaWN1bG9zXEVkaXRhclZlaWN1bG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Daniel TI/Desktop/Veiculos/Cadastro de veiculos/Cadastro de veiculos/Views/CadastrodeVeiculos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FkYXN0cm9kZVZlaWN1bG9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Daniel TI/Desktop/Veiculos/Cadastro de veiculos/Cadastro de veiculos/Views/CadastrodeVeiculos/NovoVeiculo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FkYXN0cm9kZVZlaWN1bG9zXE5vdm9WZWljdWxvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Daniel TI/Desktop/Veiculos/Cadastro de veiculos/Cadastro de veiculos/Views/CadastrodeVeiculos/RemoverVeiculo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FkYXN0cm9kZVZlaWN1bG9zXFJlbW92ZXJWZWljdWxvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Daniel TI/Desktop/Veiculos/Cadastro de veiculos/Cadastro de veiculos/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Daniel TI/Desktop/Veiculos/Cadastro de veiculos/Cadastro de veiculos/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Daniel TI/Desktop/Veiculos/Cadastro de veiculos/Cadastro de veiculos/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Daniel TI/Desktop/Veiculos/Cadastro de veiculos/Cadastro de veiculos/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Daniel TI/Desktop/Veiculos/Cadastro de veiculos/Cadastro de veiculos/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-23fhtjbi8t

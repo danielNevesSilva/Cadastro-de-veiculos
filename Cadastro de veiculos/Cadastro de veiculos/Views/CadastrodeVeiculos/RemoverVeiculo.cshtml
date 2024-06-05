@@ -1,0 +1,25 @@
+﻿@model VeiculoModel
+
+@{
+    ViewData["Title"] = "Confimação o Veiculo";
+}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Exclusão</title>
+</head>
+<body>
+
+    <div class="text-center">
+        <h3>Realmente deseja apagar esse Veículo PLACA (@Model.Placa)?</h3>
+    </div>
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+        <a class="btn btn-secondary btn-block" asp-controller="CadastrodeVeiculos" asp-action="Index" role="button">Cancelar exclusão</a>
+        <a class="btn btn-primary btn-block" asp-controller="CadastrodeVeiculos" asp-action="Desativar" asp-route-id="@Model.id" role="button">Confirmar exclusão</a>
+    </div>
+
+</body>
+</html>

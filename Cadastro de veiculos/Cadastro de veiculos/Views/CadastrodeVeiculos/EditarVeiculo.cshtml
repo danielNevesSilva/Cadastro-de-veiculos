@@ -1,0 +1,72 @@
+﻿@model VeiculoModel
+@{
+    ViewData["Title"] = "Editar Veiculo";
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Veículo</title>
+</head>
+<body>
+
+    <div class="text-center">
+        <h1 class="display-4">Editar veículo</h1>
+    </div>
+
+    <form asp-controller="CadastrodeVeiculos" asp-action="Alterar" method="post">
+        <input type="hidden" asp-for="id" />
+        <div class="mb-3">
+            <label for="Placa">Placa</label>
+            <input type="text" asp-for="Placa" class="form-control" placeholder="Digite a Placa" maxlength="6" required oninput="toUpperCase('Placa')">
+        </div>
+        <div class="mb-3">
+            <label for="marca">Marca</label>
+            <input type="text" asp-for="Marca" class="form-control" placeholder="Digite a marca do veículo" required oninput="toUpperCase('Marca')">
+        </div>
+        <div class="mb-3">
+            <label for="modelo">Modelo</label>
+            <input type="text" asp-for="Modelo" class="form-control" placeholder="Digite o modelo do veículo" required oninput="toUpperCase('Modelo')">
+        </div>
+        <div class="mb-3">
+            <label for="Tipo">Tipo</label>
+            <select class="form-select" asp-for="Tipo" aria-label="Default select example" required>
+                <option value="CCL">CCL</option>
+                <option value="CAVALO">CAVALO</option>
+                <option value="FURGAO">FURGAO</option>
+                <option value="MUNCK">MUNCK</option>
+                <option value="VEICULO LEVE">VEICULO LEVE</option>
+                <option value="CARRETA">CARRETA</option>
+                <option value="EQUIPAMENTO">EQUIPAMENTO</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="Unidade">Unidade</label>
+            <select class="form-select" asp-for="Unidade" aria-label="Default select example" required>
+                <option value="SUL">SUL</option>
+                <option value="LESTE">LESTE</option>
+                <option value="CLT">CLT</option>
+                <option value="TSA">TSA</option>
+                <option value="ETV">ETV</option>
+                <option value="CMT">CMT</option>
+                <option value="UTRSS">UTRSS</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="modelo">Renavam</label>
+            <input type="number" asp-for="Renavam" class="form-control" placeholder="Apenas numérico não permitindo espaços, pontos ou vírgula" required>
+        </div>
+        <div class="mb-3">
+            <label for="DataCriacao">Data de Criação</label>
+            <input type="date" asp-for="DataCriacao" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary">Alterar</button>
+        <a class="btn btn-secondary" asp-controller="CadastrodeVeiculos" asp-action="Index" role="button">Voltar</a>
+    </form>
+
+    <script src="~/js/Create.js"></script>
+
+</body>
+</html>
